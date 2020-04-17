@@ -4,11 +4,11 @@ user = root
 password = 26012601
 devMode = true
 
-app.consul.ip = 127.0.0.1
-app.consul.port = 8500
+# app.consul.ip = 127.0.0.1
+# app.consul.port = 8500
 app.name = jfinalDemo
 app.ip = 192.168.99.170
-app.port = 8080
+# app.port = 8080
 app.scanPackages = com.demo
 # app.health.checkUrl = http://10.0.75.1:8080/status
 # app.health.interval = 3s

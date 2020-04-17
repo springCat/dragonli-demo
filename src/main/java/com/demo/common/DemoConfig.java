@@ -38,10 +38,6 @@ public class DemoConfig extends DragonLiConfig {
 			p = PropKit.useFirstFound("demo-config-pro.txt", "demo-config-dev.txt");
 		}
 		me.setDevMode(false);
-		me.setInjectDependency(true);
-		// 配置对超类中的属性进行注入
-		me.setInjectSuperClass(true);
-		me.setJsonFactory(new MixedJsonFactory());
 	}
 
 	/**
