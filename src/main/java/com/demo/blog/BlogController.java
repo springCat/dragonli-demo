@@ -40,7 +40,7 @@ public class BlogController extends JsonController {
 	}
 
 	public void config(){
-		renderText(ConfigUtil.getAppConf("/1/1/1"));
+		renderText(ConfigUtil.getUserConf("/1/1/1"));
 	}
 }
 

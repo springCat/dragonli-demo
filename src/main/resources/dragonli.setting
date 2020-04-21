@@ -1,0 +1,17 @@
+[consul]
+ip = 127.0.0.1
+port = 8500
+
+[app]
+name = jfinalDemo
+ip = 192.168.99.170
+port = 8080
+appTags =
+checkUrl = http://192.168.99.170:8080/status
+checkInterval = 3s
+checkTimout = 1s
+
+
+[rpc]
+scanPackages = com.demo
+

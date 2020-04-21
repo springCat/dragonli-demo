@@ -25,10 +25,6 @@ public class DemoConfig extends DragonLiConfig {
 	
 	static Prop p;
 
-	@Override
-	public Prop loadDragonLiProp() {
-		return p;
-	}
 
 	/**
 	 * 配置常量
