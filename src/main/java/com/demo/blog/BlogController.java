@@ -3,7 +3,7 @@ package com.demo.blog;
 import cn.hutool.core.map.MapUtil;
 import com.jfinal.aop.Before;
 import com.jfinal.aop.Inject;
-import org.springcat.dragonli.config.ConfigUtil;
+import org.springcat.dragonli.core.config.ConfigUtil;
 import org.springcat.dragonli.jfinal.controller.JsonController;
 
 

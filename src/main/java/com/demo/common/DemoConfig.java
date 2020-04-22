@@ -6,7 +6,6 @@ import com.jfinal.config.Handlers;
 import com.jfinal.config.Interceptors;
 import com.jfinal.config.Plugins;
 import com.jfinal.config.Routes;
-import com.jfinal.json.MixedJsonFactory;
 import com.jfinal.kit.Prop;
 import com.jfinal.kit.PropKit;
 import com.jfinal.server.undertow.UndertowServer;

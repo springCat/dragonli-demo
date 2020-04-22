@@ -1,10 +1,8 @@
 package com.demo.blog;
 
-import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig;
-import org.springcat.dragonli.client.Recover;
-import org.springcat.dragonli.client.Rpc;
 
-import java.time.Duration;
+import org.springcat.dragonli.core.rpc.Rpc;
+
 import java.util.Map;
 
 
