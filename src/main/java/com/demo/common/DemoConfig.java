@@ -79,9 +79,8 @@ public class DemoConfig extends DragonLiConfig {
 	 */
 	public static void main(String[] args) {
 
-		UndertowServer undertowServer = UndertowServer
-				.create(DemoConfig.class);
-		undertowServer
+		UndertowServer
+				.create(DemoConfig.class)
 				.addHotSwapClassPrefix("org.springcat.dragonli")
 				.start();
 	}

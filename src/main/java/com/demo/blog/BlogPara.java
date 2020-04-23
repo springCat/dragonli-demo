@@ -1,5 +1,6 @@
 package com.demo.blog;
 
+import io.github.resilience4j.core.lang.NonNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,8 +10,7 @@ import org.springcat.dragonli.jfinal.controller.JsonBeanValidate;
 
 import javax.validation.constraints.NotBlank;
 
-@NoArgsConstructor
-@AllArgsConstructor
+
 @Data
 public class BlogPara implements JsonBeanValidate {
 
