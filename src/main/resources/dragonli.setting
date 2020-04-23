@@ -2,7 +2,7 @@
 ip = 127.0.0.1
 port = 8500
 
-[app]
+[application]
 name = jfinalDemo
 ip = 192.168.99.170
 port = 8080
@@ -13,4 +13,10 @@ checkTimout = 1s
 
 [rpc]
 scanPackages = com.demo
+#validationImplClass = org.springcat.dragonli.core.rpc.ihandle.impl.Jsr303Validation
+#serializeImplClass = org.springcat.dragonli.core.rpc.ihandle.impl.FastJsonSerialize
+#httpTransformImplClass = org.springcat.dragonli.core.rpc.ihandle.impl.HttpclientTransform
+#loadBalanceRuleImplClass = org.springcat.dragonli.core.rpc.ihandle.impl.ConsistentHashRule
+#errorHandleImplClass = org.springcat.dragonli.core.rpc.ihandle.impl.Resilience4jErrorHandle
+#serviceRegisterImplClass = org.springcat.dragonli.core.rpc.ihandle.impl.ConsulServiceRegister
 
