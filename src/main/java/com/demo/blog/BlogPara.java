@@ -1,20 +1,14 @@
 package com.demo.blog;
 
-import io.github.resilience4j.core.lang.NonNull;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
+import org.springcat.dragonli.core.rpc.RpcResponse;
 import org.springcat.dragonli.jfinal.controller.JsonBeanValidate;
-
 import javax.validation.constraints.NotBlank;
 
-
 @Data
-public class BlogPara implements JsonBeanValidate {
-
-    private String code;
+public class BlogPara extends RpcResponse implements JsonBeanValidate {
 
     @Range(min=1,message="4001")
     private int id;
@@ -24,6 +18,5 @@ public class BlogPara implements JsonBeanValidate {
 
     @NotBlank(message="4003")
     private String content;
-
 
 }

@@ -6,13 +6,10 @@ import com.jfinal.aop.Inject;
 import org.springcat.dragonli.core.config.ConfigUtil;
 import org.springcat.dragonli.jfinal.controller.JsonController;
 
-
-
 public class BlogController extends JsonController {
 
 	@Inject
 	private BlogService blogService;
-
 
 	@Before(BlogPara.class)
 	public void json() {
