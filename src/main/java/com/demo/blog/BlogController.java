@@ -19,12 +19,6 @@ public class BlogController extends JsonController {
 		renderJson(jsonBean);
 	}
 
-	public void test(){
-		BlogPara blogPara = getJsonBean(BlogPara.class);
-		BlogPara resp = blogService.json(blogPara);
-		renderJson(resp);
-	}
-
 	@Before(BlogPara.class)
 	public void testHeader(){
 		BlogPara blogPara = getJsonBean(BlogPara.class);

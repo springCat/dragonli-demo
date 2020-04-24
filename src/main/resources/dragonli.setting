@@ -10,6 +10,7 @@ appTags =
 checkUrl = http://192.168.99.170:8080/status
 checkInterval = 3s
 checkTimout = 1s
+rootPath =
 
 [rpc]
 scanPackages = com.demo

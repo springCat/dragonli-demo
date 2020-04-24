@@ -6,12 +6,22 @@ import org.springcat.dragonli.core.rpc.Rpc;
 import java.util.Map;
 
 
-@Rpc("jfinalDemo")
+@Rpc(appName = "jfinalDemo")
 public interface BlogService {
 
-    BlogPara json(BlogPara blogPara);
-
-
+    /**
+     * supports:
+     *
+     * json(BlogPara blogPara)
+     *
+     * json(BlogPara blogPara, Map<String,Object> header)
+     *
+     * json(BlogPara blogPara, Map<String,Object> header,Supplier recover)
+     *
+     * @param blogPara
+     * @param header
+     * @return
+     */
     BlogPara json(BlogPara blogPara, Map<String,Object> header);
 
 
