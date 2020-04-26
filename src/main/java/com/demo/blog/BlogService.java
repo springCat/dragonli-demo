@@ -4,6 +4,7 @@ package com.demo.blog;
 import org.springcat.dragonli.core.rpc.Rpc;
 
 import java.util.Map;
+import java.util.function.Supplier;
 
 
 @Rpc(appName = "jfinalDemo")
@@ -22,7 +23,7 @@ public interface BlogService {
      * @param header
      * @return
      */
-    BlogPara json(BlogPara blogPara, Map<String,Object> header);
+    BlogPara json(BlogPara blogPara, Map<String,Object> header, Supplier recover);
 
 
 }
