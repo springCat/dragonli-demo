@@ -6,11 +6,13 @@ port = 8500
 name = jfinalDemo
 ip = 192.168.99.170
 port = 8080
-appTags =
-checkUrl = http://192.168.99.170:8080/status
+rootPath =
+#appTags =
+healthCheckPath = /status
+checkUrl = http://${application.ip}:${application.port}${application.healthCheckPath}
 checkInterval = 3s
 checkTimout = 1s
-rootPath =
+
 
 [rpc]
 scanPackages = com.demo
@@ -25,6 +27,13 @@ loadBalanceKeyName=x-uid
 
 [config]
 sysConfPath=/config/sysConf/${application.name}/
-sysConfLocalPath=sysConf.setting
 userConfPath=/config/userConf/${application.name}/
-userConfLocalPath=userConf.setting
+
+[apiGateway]
+healthCheckUrl = /status
+configPathConsul = exposeUrl
+apiExposeUrlsFilepath = apiGateway.setting
+httpTransformImplClass = org.springcat.dragonli.core.rpc.ihandle.impl.HttpclientTransform
+loadBalanceRuleImplClass = org.springcat.dragonli.core.rpc.ihandle.impl.ConsistentHashRule
+errorHandleImplClass = org.springcat.dragonli.core.rpc.ihandle.impl.Resilience4jErrorHandle
+serviceRegisterImplClass = org.springcat.dragonli.core.rpc.ihandle.impl.ConsulServiceRegister
